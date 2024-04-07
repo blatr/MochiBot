@@ -1,0 +1,8 @@
+*.sqlite
+__pycache__/
+*/.pytest
+*_env
+.vscode
+config/*.env
+*.mp4
+*.log*
