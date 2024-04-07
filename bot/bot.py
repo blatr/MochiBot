@@ -1,8 +1,4 @@
-import datetime
-import io
-import json
 import logging
-import traceback
 from logging.handlers import RotatingFileHandler
 
 import httpx
@@ -82,18 +78,6 @@ async def add_word(update: Update, context: CallbackContext):
             await update.message.reply_text("Word added successfully")
         del context.user_data['new_word']
         return
-
-# async def post_init(application: Application):
-#     await application.bot.set_my_commands(
-#         [
-#             BotCommand("/add_user", texts["ru"]["menu_add_user_cmd"]),
-#             BotCommand("/happy_bday", texts["ru"]["menu_add_generate_greetings"]),
-#             BotCommand("/watchlist", texts["ru"]["menu_watchlist_cmd"]),
-#             BotCommand("/settings", texts["ru"]["menu_settings_cmd"]),
-#             # BotCommand("/balance", texts["ru"]["menu_add_balance_cmd"]),
-#             BotCommand("/help", texts["ru"]["menu_help_cmd"]),
-#         ]
-#     )
 
 def run_bot() -> None:
     application = (
